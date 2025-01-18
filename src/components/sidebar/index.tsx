@@ -3,6 +3,7 @@ import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Home, LogOut, Package, PanelBottom, Sandwich, Settings, ShoppingBag, User, Users } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
+import { ModeToggle } from "../theme-provider/menuToggle";
 
 export function Sidebar(){
     return(
@@ -71,6 +72,16 @@ export function Sidebar(){
                         </Link>
                         </TooltipTrigger>
                         <TooltipContent side="right">Configurações</TooltipContent>
+                    </Tooltip>
+                    <Tooltip>
+                        <TooltipTrigger asChild>
+                        <Link href="#"
+                            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg 
+                            text-muted-foreground transition-colors hover:text-foreground">
+                            <ModeToggle/>
+                        </Link>
+                        </TooltipTrigger>
+                        <TooltipContent side="right">Temas</TooltipContent>
                     </Tooltip>
                 </TooltipProvider>
             </nav>
